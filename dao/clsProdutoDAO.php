@@ -12,9 +12,9 @@ class ProdutoDAO {
         $sql = "INSERT INTO produtos ( nome, quantidade, preco ) VALUES "
                 . " ( '".$produto->getProduto()."' ,"
                 . " ( ".$produto->getProduto()." ,"
-                . " ( ".$produto->getProduto()." ,"
+                . " ( ".$produto->getProduto()." ,";
                 
-                . " ); ";
+                
         Conexao::executar($sql);
         
     }

@@ -6,7 +6,7 @@
  * @author assparremberger
  * 25/10/2018
  */
-class Cidade {
+class Produto {
     private $id;
     private $nome;
     private $quantidade;

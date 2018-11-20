@@ -5,10 +5,16 @@ include_once '../dao/clsConexao.php';
 
 
 if( isset( $_REQUEST['inserir'] ) ){
-    $produto = new ProdutoDAO();
+    $produto = new Produto();
     $produto->setNome( $_POST['txtNome']  );
-    $produto->setQuantidade( $_POST['txtQuantidade']  );
-    $produto->setPreco( $_POST['txtPreco']  );
+    
+    $quant = $_POST['txtQuantidade'] ;
+    $quant = str_replace(",", ".", $quant);
+    $produto->setQuantidade( $quant );
+    
+    $quant = $_POST['txtPreco'] ;
+    $quant = str_replace(",", ".", $quant);
+    $produto->setPreco( $quant );
     
     ProdutoDAO::inserir($produto);
     
